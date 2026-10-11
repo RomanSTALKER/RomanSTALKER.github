@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShotShare — сервис скриншотов</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ==================== ШАПКА ==================== -->
+  <header class="header">
+    <div class="container header__inner">
+      <a href="/" class="logo">
+        <span class="logo__mark" aria-hidden="true">📸</span>
+        <span>ShotShare</span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="/">Главная</a>
+        <a href="/upload">Загрузить</a>
+        <a href="/about">О сервисе</a>
+      </nav>
+
+      <div class="auth-actions">
+        <button type="button" class="btn btn--ghost" data-open-modal="login">Войти</button>
+        <button type="button" class="btn btn--primary" data-open-modal="register">Зарегистрироваться</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO ==================== -->
+    <section class="hero">
+      <div class="container">
+        <h1 class="hero__title">Делись скриншотами мгновенно</h1>
+        <p class="hero__subtitle">
+          Загружайте изображения и получайте короткие неугадываемые ссылки для обмена.
+        </p>
+        <button type="button" class="btn btn--primary btn--lg" data-open-modal="register">
+          Загрузить скриншот
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== ГАЛЕРЕЯ ==================== -->
+    <section class="gallery">
+      <div class="container">
+        <div class="gallery__head">
+          <h2 class="gallery__title">Публичные скриншоты</h2>
+          <span class="gallery__count">Показано 8 из 132</span>
+        </div>
+
+        <div class="grid">
+          <a class="card" href="/s/Ab3xK9pQ">
+            <div class="card__thumb">
+              <img src="https://picsum.photos/seed/shot1/600/400" alt="Скриншот от 12 марта 2024" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <span class="card__date">12 марта 2024</span>
+              <span class="card__badge">Public</span>
+            </div>
+          </a>
+
+          <a class="card" href="/s/Bc7mN2rT">
+            <div class="card__thumb">
+              <img src="https://picsum.photos/seed/shot2/600/400" alt="Скриншот от 10 марта 2024" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <span class="card__date">10 марта 2024</span>
+              <span class="card__badge">Public</span>
+            </div>
+          </a>
+
+          <a class="card" href="/s/De5kP8wZ">
+            <div class="card__thumb">
+              <img src="https://picsum.photos/seed/shot3/600/400" alt="Скриншот от 8 марта 2024" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <span class="card__date">8 марта 2024</span>
+              <span class="card__badge">Public</span>
+            </div>
+          </a>
+
+          <a class="card" href="/s/Fg2hJ5vX">
+            <div class="card__thumb">
+              <img src="https://picsum.photos/seed/shot4/600/400" alt="Скриншот от 6 марта 2024" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <span class="card__date">6 марта 2024</span>
+              <span class="card__badge">Public</span>
+            </div>
+          </a>
+
+          <a class="card" href="/s/Kl9mQ3nR">
+            <div class="card__thumb">
+              <img src="https://picsum.photos/seed/shot5/600/400" alt="Скриншот от 5 марта 2024" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <span class="card__date">5 марта 2024</span>
+              <span class="card__badge">Public</span>
+            </div>
+          </a>
+
+          <a class="card" href="/s/Mn4pS7tV">
+            <div class="card__thumb">
+              <img src="https://picsum.photos/seed/shot6/600/400" alt="Скриншот от 3 марта 2024" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <span class="card__date">3 марта 2024</span>
+              <span class="card__badge">Public</span>
+            </div>
+          </a>
+
+          <a class="card" href="/s/Pq6rT9uW">
+            <div class="card__thumb">
+              <img src="https://picsum.photos/seed/shot7/600/400" alt="Скриншот от 1 марта 2024" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <span class="card__date">1 марта 2024</span>
+              <span class="card__badge">Public</span>
+            </div>
+          </a>
+
+          <a class="card" href="/s/Xy8zA2bC">
+            <div class="card__thumb">
+              <img src="https://picsum.photos/seed/shot8/600/400" alt="Скриншот от 28 февраля 2024" loading="lazy" />
+            </div>
+            <div class="card__body">
+              <span class="card__date">28 февраля 2024</span>
+              <span class="card__badge">Public</span>
+            </div>
+          </a>
+        </div>
+
+        <nav class="pagination" aria-label="Постраничная навигация">
+          <span class="pagination__link is-disabled" aria-hidden="true">←</span>
+          <a href="/page/1" class="is-active" aria-current="page">1</a>
+          <a href="/page/2">2</a>
+          <a href="/page/3">3</a>
+          <a href="/page/4">4</a>
+          <span class="pagination__dots" aria-hidden="true">…</span>
+          <a href="/page/17">17</a>
+          <a href="/page/2" aria-label="Следующая страница">→</a>
+        </nav>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== ПОДВАЛ ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <a href="/" class="logo">
+            <span class="logo__mark" aria-hidden="true">📸</span>
+            <span>ShotShare</span>
+          </a>
+          <p>Сервис для быстрого обмена скриншотами по коротким неугадываемым ссылкам.</p>
+        </div>
+
+        <div class="footer__col">
+          <h3>Сервис</h3>
+          <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/upload">Загрузить</a></li>
+            <li><a href="/my">Мои скриншоты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Компания</h3>
+          <ul>
+            <li><a href="/about">О нас</a></li>
+            <li><a href="/blog">Блог</a></li>
+            <li><a href="/contacts">Контакты</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h3>Правовое</h3>
+          <ul>
+            <li><a href="/privacy">Политика конфиденциальности</a></li>
+            <li><a href="/terms">Условия использования</a></li>
+            <li><a href="/pd">Обработка ПД</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <span>© 2024 ShotShare. Все права защищены.</span>
+        <span>Липецк · ЛГТУ · ИКН</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== МОДАЛЬНОЕ ОКНО ==================== -->
+  <div class="modal" id="modal" aria-hidden="true" inert>
+    <div class="modal__overlay" data-close-modal></div>
+
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="login-title">
+      <button type="button" class="modal__close" data-close-modal aria-label="Закрыть">×</button>
+
+      <!-- Озвучивание ошибок форм скринридером -->
+      <div class="sr-only" id="form-live" aria-live="polite" aria-atomic="true"></div>
+
+      <div class="tabs" role="tablist" aria-label="Формы авторизации и регистрации">
+        <button type="button" class="tabs__btn is-active" data-tab="login"
+                role="tab" id="tab-login"
+                aria-selected="true" aria-controls="login-form" tabindex="0">Вход</button>
+        <button type="button" class="tabs__btn" data-tab="register"
+                role="tab" id="tab-register"
+                aria-selected="false" aria-controls="register-form" tabindex="-1">Регистрация</button>
+      </div>
+
+      <!-- ===== Форма «Вход» ===== -->
+      <form class="form is-active" id="login-form" data-form="login" novalidate
+            role="tabpanel" aria-labelledby="tab-login">
+        <h3 class="form__title" id="login-title">Вход в аккаунт</h3>
+        <p class="form__subtitle">Введите данные для входа в систему</p>
+
+        <div class="field">
+          <label class="field__label" for="login-email">Логин (E-mail)</label>
+          <input class="field__input" type="email" id="login-email" name="email"
+                 placeholder="you@example.com" autocomplete="email"
+                 required
+                 pattern="[^\s@]+@[^\s@]+\.[^\s@]{2,}"
+                 title="Введите корректный e-mail, например user@example.com" />
+          <div class="field__error">Введите корректный e-mail</div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="login-password">Пароль</label>
+          <input class="field__input" type="password" id="login-password" name="password"
+                 placeholder="••••••" autocomplete="current-password"
+                 required minlength="6" />
+          <div class="field__error">Пароль должен быть не короче 6 символов</div>
+        </div>
+
+        <button type="submit" class="btn btn--primary btn--lg form__submit">Войти</button>
+
+        <p class="form__switch">
+          Нет аккаунта?
+          <button type="button" data-switch-to="register">Зарегистрироваться</button>
+        </p>
+      </form>
+
+      <!-- ===== Форма «Регистрация» ===== -->
+      <form class="form" id="register-form" data-form="register" novalidate
+            role="tabpanel" aria-labelledby="tab-register">
+        <h3 class="form__title" id="register-title">Создание аккаунта</h3>
+        <p class="form__subtitle">Заполните поля, чтобы зарегистрироваться</p>
+
+        <div class="field">
+          <label class="field__label" for="reg-name">Имя</label>
+          <input class="field__input" type="text" id="reg-name" name="name"
+                 placeholder="Иван Иванов" autocomplete="name"
+                 required
+                 pattern="[А-Яа-яЁё]+([ \-][А-Яа-яЁё]+)*"
+                 title="Только русские буквы, пробелы и дефисы" />
+          <div class="field__error">Только русские буквы, пробелы и дефисы</div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="reg-email">E-mail</label>
+          <input class="field__input" type="email" id="reg-email" name="email"
+                 placeholder="you@example.com" autocomplete="email"
+                 required
+                 pattern="[^\s@]+@[^\s@]+\.[^\s@]{2,}"
+                 title="Введите корректный e-mail, например user@example.com" />
+          <div class="field__error">Некорректный e-mail или он уже занят</div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="reg-phone">Телефон</label>
+          <input class="field__input" type="tel" id="reg-phone" name="phone"
+                 placeholder="+7 (999) 123-45-67" autocomplete="tel"
+                 required />
+          <div class="field__error">Введите мобильный телефон (+7 или 8, 11 цифр)</div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="reg-password">Пароль</label>
+          <input class="field__input" type="password" id="reg-password" name="password"
+                 placeholder="Минимум 6 символов" autocomplete="new-password"
+                 required minlength="6" />
+          <div class="field__error">Минимум 6 символов и не только цифры</div>
+        </div>
+
+        <div class="field">
+          <label class="field__label" for="reg-password2">Повторите пароль</label>
+          <input class="field__input" type="password" id="reg-password2" name="password2"
+                 placeholder="Повторите пароль" autocomplete="new-password"
+                 required />
+          <div class="field__error">Пароли не совпадают</div>
+        </div>
+
+        <label class="checkbox" id="agree-wrap">
+          <input type="checkbox" id="reg-agree" name="agree" required />
+          <span>
+            Я согласен на обработку
+            <a href="/pd" target="_blank" rel="noopener">персональных данных</a>
+          </span>
+        </label>
+
+        <button type="submit" class="btn btn--primary btn--lg form__submit">
+          Зарегистрироваться
+        </button>
+
+        <p class="form__switch">
+          Уже есть аккаунт?
+          <button type="button" data-switch-to="login">Войти</button>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    /* =========================================================
+       Модальное окно: открытие / закрытие / переключение табов
+       ========================================================= */
+    const modal = document.getElementById('modal');
+    const modalDialog = modal.querySelector('.modal__dialog');
+    const tabs = [...modal.querySelectorAll('.tabs__btn')];
+    const forms = modal.querySelectorAll('.form');
+    const formLive = document.getElementById('form-live');
+    let lastTrigger = null;
+
+    function openModal(tab = 'login') {
+      switchTab(tab);
+      modal.classList.add('is-open');
+      modal.removeAttribute('inert');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+
+      const activeForm = modal.querySelector('.form.is-active');
+      const firstInput = activeForm?.querySelector('input');
+      setTimeout(() => firstInput?.focus(), 250);
+    }
+
+    function closeModal() {
+      modal.classList.remove('is-open');
+      modal.setAttribute('inert', '');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('no-scroll');
+
+      forms.forEach(f => {
+        f.classList.remove('touched');
+        f.querySelectorAll('input').forEach(i => i.setCustomValidity(''));
+      });
+      resetAllErrors();
+      formLive.textContent = '';
+
+      if (lastTrigger) {
+        lastTrigger.focus();
+        lastTrigger = null;
+      }
+    }
+
+    function switchTab(name, focusFirst = false) {
+      tabs.forEach(btn => {
+        const active = btn.dataset.tab === name;
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-selected', String(active));
+        btn.setAttribute('tabindex', active ? '0' : '-1');
+      });
+      forms.forEach(f => f.classList.toggle('is-active', f.dataset.form === name));
+
+      modalDialog.setAttribute(
+        'aria-labelledby',
+        name === 'login' ? 'login-title' : 'register-title'
+      );
+
+      if (focusFirst) {
+        const firstInput = modal.querySelector(`.form[data-form="${name}"] input`);
+        firstInput?.focus();
+      }
+    }
+
+    function announce(text) {
+      formLive.textContent = '';
+      requestAnimationFrame(() => {
+        formLive.textContent = text;
+      });
+    }
+
+    // Открытие модалки
+    document.querySelectorAll('[data-open-modal]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        lastTrigger = btn;
+        openModal(btn.dataset.openModal);
+      });
+    });
+
+    // Закрытие (оверлей и крестик)
+    modal.querySelectorAll('[data-close-modal]').forEach(el => {
+      el.addEventListener('click', closeModal);
+    });
+
+    // Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+
+    // Фокус-трап внутри модалки
+    modal.addEventListener('keydown', e => {
+      if (e.key !== 'Tab') return;
+      const focusable = modal.querySelectorAll(
+        'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+      );
+      const visible = [...focusable].filter(el => el.offsetParent !== null && !el.disabled);
+      if (!visible.length) return;
+      const first = visible[0];
+      const last = visible[visible.length - 1];
+
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
+
+    // Переключение табов + стрелки ←/→
+    tabs.forEach((btn, i) => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.tab));
+      btn.addEventListener('keydown', e => {
+        if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+        e.preventDefault();
+        const dir = e.key === 'ArrowRight' ? 1 : -1;
+        const next = (i + dir + tabs.length) % tabs.length;
+        tabs[next].focus();
+        switchTab(tabs[next].dataset.tab);
+      });
+    });
+
+    // Кнопки «Зарегистрироваться» / «Войти» внутри форм
+    modal.querySelectorAll('[data-switch-to]').forEach(btn => {
+      btn.addEventListener('click', () => switchTab(btn.dataset.switchTo, true));
+    });
+
+    /* =========================================================
+       Валидация на встроенных методах HTML5 Constraint Validation API
+       ========================================================= */
+
+    // Мок-список «занятых» e-mail (на бэке — проверка в БД)
+    const takenEmails = ['admin@example.com', 'test@test.ru'];
+
+    function applyCustomValidity(input) {
+      input.setCustomValidity('');
+      const form = input.form;
+      if (!form) return;
+
+      switch (input.id) {
+        case 'reg-email': {
+          const v = input.value.trim().toLowerCase();
+          if (v && takenEmails.includes(v)) {
+            input.setCustomValidity('Этот e-mail уже зарегистрирован');
+          }
+          break;
+        }
+        case 'reg-phone': {
+          const v = input.value.trim();
+          if (v) {
+            const allowed = /^[\d\s()+\-]+$/.test(v);
+            const digits = v.replace(/\D/g, '');
+            const ok = allowed
+                    && digits.length === 11
+                    && (digits[0] === '7' || digits[0] === '8');
+            if (!ok) {
+              input.setCustomValidity('Введите мобильный телефон (+7 или 8, 11 цифр)');
+            }
+          }
+          break;
+        }
+        case 'reg-password': {
+          const v = input.value;
+          if (v && !/[^\d]/.test(v)) {
+            input.setCustomValidity('Пароль не может состоять только из цифр');
+          }
+          break;
+        }
+        case 'reg-password2': {
+          const p1 = form.querySelector('#reg-password').value;
+          if (input.value && input.value !== p1) {
+            input.setCustomValidity('Пароли не совпадают');
+          }
+          break;
+        }
+      }
+    }
+
+    function setError(input, hasError) {
+      const field = input.closest('.field') || input.closest('.checkbox');
+      if (input.type !== 'checkbox') {
+        input.classList.toggle('is-invalid', hasError);
+      }
+      field?.classList.toggle('has-error', hasError);
+    }
+
+    function resetAllErrors() {
+      modal.querySelectorAll('.field, .checkbox').forEach(el => el.classList.remove('has-error'));
+      modal.querySelectorAll('.is-invalid').forEach(el => el.classList.remove('is-invalid'));
+    }
+
+    function getErrorText(input) {
+      const field = input.closest('.field') || input.closest('.checkbox');
+      const errorEl = field?.querySelector('.field__error');
+      return errorEl ? errorEl.textContent.trim() : '';
+    }
+
+    // Живая валидация
+    modal.querySelectorAll('input').forEach(input => {
+      const handler = () => {
+        applyCustomValidity(input);
+
+        const form = input.form;
+        const valid = input.checkValidity();
+        const touched = form.classList.contains('touched');
+        const hasValue = input.type === 'checkbox'
+          ? input.checked
+          : input.value.trim().length > 0;
+
+        setError(input, !valid && (touched || hasValue));
+      };
+
+      input.addEventListener('input', handler);
+      input.addEventListener('change', handler);
+      input.addEventListener('blur', handler);
+    });
+
+    // Тримминг имени при потере фокуса — чтобы ведущий/замыкающий пробел
+    // не ломал pattern и не раздражал пользователя ложной ошибкой.
+    document.getElementById('reg-name')?.addEventListener('blur', e => {
+      const trimmed = e.target.value.trim();
+      if (trimmed !== e.target.value) {
+        e.target.value = trimmed;
+        applyCustomValidity(e.target);
+        setError(e.target, !e.target.checkValidity());
+      }
+    });
+
+    // При изменении основного пароля перепроверяем «повтор пароля»
+    const regPassword = document.getElementById('reg-password');
+    const regPassword2 = document.getElementById('reg-password2');
+    regPassword?.addEventListener('input', () => {
+      if (regPassword2.value.length > 0) {
+        applyCustomValidity(regPassword2);
+        setError(regPassword2, !regPassword2.checkValidity());
+      }
+    });
+
+    /* =========================================================
+       Отправка форм
+       ========================================================= */
+    function handleFormSubmit(form) {
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        form.classList.add('touched');
+
+        form.querySelectorAll('input').forEach(input => {
+          applyCustomValidity(input);
+          setError(input, !input.checkValidity());
+        });
+
+        if (!form.checkValidity()) {
+          const firstInvalid = form.querySelector(':invalid');
+          if (firstInvalid) {
+            firstInvalid.focus();
+            const errorText = getErrorText(firstInvalid);
+            if (errorText) announce(errorText);
+          }
+          return;
+        }
+
+        const data = {};
+        form.querySelectorAll('input').forEach(input => {
+          if (input.type === 'checkbox') {
+            data[input.name] = input.checked;
+          } else if (input.type === 'password') {
+            // Пароль маскируется — не логируем в открытом виде
+            data[input.name] = '•'.repeat(input.value.length);
+          } else {
+            data[input.name] = input.value.trim();
+          }
+        });
+
+        const payload = {
+          form: form.dataset.form,
+          ...data,
+          submittedAt: new Date().toISOString()
+        };
+
+        console.log(`[${form.dataset.form.toUpperCase()}] Данные формы:`, payload);
+
+        alert(form.dataset.form === 'login'
+          ? 'Вход выполнен (демо). Данные выведены в консоль.'
+          : 'Регистрация успешна (демо). Данные выведены в консоль.');
+
+        form.reset();
+        closeModal();
+      });
+    }
+
+    handleFormSubmit(document.getElementById('login-form'));
+    handleFormSubmit(document.getElementById('register-form'));
+  </script>
+</body>
+</html>
